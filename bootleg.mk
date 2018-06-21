@@ -15,11 +15,10 @@
 # limitations under the License.
 
 
-# Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/potter/full_potter.mk)
 
-# Inherit some common GZOSP stuff.
-$(call inherit-product, vendor/validus/config/common_full_phone.mk)
+# Inherit some common Bootleg stuff.
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -27,15 +26,11 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
-PRODUCT_NAME := validus_potter
+PRODUCT_NAME := bootleg_potter
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="Moto G5 Plus" \
-    DEVICE_MAINTAINERS="Nick van Bokhorst (GtrCraft)"
+PRODUCT_NAME="Moto G5 Plus"
